@@ -1,0 +1,170 @@
+/// Homepage Styles File
+@use "../../../global-styles/style.scss";
+@use "../../../global-styles/styles/fonts.scss";
+@use "../../../global-styles/styles/normalize.scss";
+@use "../../../global-styles/styles/root.scss";
+$borderRadius: 10px;
+$profilePhotoSize: 40px;
+$colorFont: var(--color-primary);
+$contentWidth: 576px;
+$marginTopOfElement: 32px;
+$transferSize: 14px;
+$widthHover: 608px;
+$profilePhotoSizeMobile:36px;
+$contentWidthMobile:311px;
+$marginTopOfElementSm: 28px;
+$contentWidthSm: 245px;
+$profilePhotoSizeSm: 30px;
+
+.home-page{
+    position: relative;
+
+    &_card{
+        width: 608px;
+        border-radius: $borderRadius;
+        border-style: none;
+        background-color: var(--color-background-of-card);
+        padding: 16px;
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &_img{
+            border-radius: $borderRadius;
+            width: $contentWidth;
+            height: 296px;
+        }
+
+        &_details-post{
+            color: $colorFont;
+            margin-top: $marginTopOfElement;
+            font-size: 14px;
+
+            &_user{
+    
+                &_profile-photo{
+                    border-radius: 50%;
+                    width: $profilePhotoSize;
+                    height: $profilePhotoSize;
+                }
+    
+                &_user-name{
+                    font-size: 14px;
+                    line-height: 100%;
+                    margin: 0;
+                    padding-left: 12px;
+                }
+            }
+
+            &_time{
+                margin: auto 0;
+            }
+        }
+
+        &_post{
+            width: $contentWidth;
+            margin-top: $marginTopOfElement;
+            font-size: 16px;
+            gap: 14px;
+
+            &_heading{
+                color: $colorFont;
+            }
+
+            &_text{
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &_transfer{
+            gap: 12px;
+
+            h2{
+                font-size: 14px;
+                color: $colorFont;
+                margin: 0;
+            }
+
+            img{
+                width: $transferSize;
+                height: $transferSize;
+                margin: auto 0;
+            }
+        }
+    }
+
+    &_card:hover &_transfer{
+        text-decoration: underline;
+    }
+    
+    @media screen and (max-width: 540px) {
+        &_card{
+            width: 343px;
+
+            &_img{
+                width: $contentWidthMobile;
+                height: 273px;
+            }
+
+            &_details-post{
+                font-size: 12px;
+
+                &_user{
+
+                    &_profile-photo{
+                        width: $profilePhotoSizeMobile;
+                        height: $profilePhotoSizeMobile;
+                    }
+
+                    &_use-name{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &_post{
+                font-size: 14px;
+                width: $contentWidthMobile;
+
+                &_heading{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 280px) {
+        &_card{
+            width: 265px;
+            padding: 10px;
+
+            &_img{
+                width: $contentWidthSm;
+                height: 240px;
+            }
+
+            &_details-post{
+                &_profile-photo{
+                    width: $profilePhotoSizeSm;
+                    height: $profilePhotoSizeSm;
+                    margin-top: $marginTopOfElementSm;
+                }
+            }
+
+            &_post{
+                width: $contentWidthSm;
+                font-size: 12px;
+                
+                &_heading{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
