@@ -99,7 +99,7 @@ $profilePhotoSizeSm: 30px;
         }
     }
 
-    &_card:hover &_transfer{
+    &_card:hover > h2{
         text-decoration: underline;
     }
     

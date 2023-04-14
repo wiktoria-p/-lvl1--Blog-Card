@@ -712,7 +712,7 @@ template {
   height: 14px;
   margin: auto 0;
 }
-.home-page_card:hover .home-page_transfer {
+.home-page_card:hover > h2 {
   text-decoration: underline;
 }
 @media screen and (max-width: 540px) {
