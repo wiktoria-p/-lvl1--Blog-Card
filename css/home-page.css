@@ -647,7 +647,8 @@ template {
 .home-page {
   position: relative;
 }
-.home-page_card {
+
+.card {
   width: 608px;
   border-radius: 10px;
   border-style: none;
@@ -659,107 +660,113 @@ template {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.home-page_card_img {
+.card__img {
   border-radius: 10px;
   width: 576px;
   height: 296px;
 }
-.home-page_card_details-post {
+.card__details-post {
   color: var(--color-primary);
   margin-top: 32px;
   font-size: 14px;
 }
-.home-page_card_details-post_user_profile-photo {
+.card__profile-photo {
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
-.home-page_card_details-post_user_user-name {
+.card__user-name {
   font-size: 14px;
   line-height: 100%;
   margin: 0;
   padding-left: 12px;
 }
-.home-page_card_details-post_time {
+.card__time {
   margin: auto 0;
 }
-.home-page_card_post {
+.card__post {
   width: 576px;
   margin-top: 32px;
   font-size: 16px;
   gap: 14px;
 }
-.home-page_card_post_heading {
+.card__post-heading {
   color: var(--color-primary);
 }
-.home-page_card_post_text {
+.card__post-text {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
-.home-page_card_transfer {
+.card__transfer {
   gap: 12px;
 }
-.home-page_card_transfer h2 {
+.card__transfer h2 {
   font-size: 14px;
   color: var(--color-primary);
   margin: 0;
 }
-.home-page_card_transfer img {
+.card__transfer img {
   width: 14px;
   height: 14px;
   margin: auto 0;
 }
-.home-page_card:hover > h2 {
+
+.card:hover .card__img {
+  transform: scale(1.05);
+}
+
+.card:hover .card__transfer {
   text-decoration: underline;
 }
+
 @media screen and (max-width: 540px) {
-  .home-page_card {
+  .card {
     width: 343px;
   }
-  .home-page_card_img {
+  .card__img {
     width: 311px;
     height: 273px;
   }
-  .home-page_card_details-post {
+  .card__details-post {
     font-size: 12px;
   }
-  .home-page_card_details-post_user_profile-photo {
+  .card__profile-photo {
     width: 36px;
     height: 36px;
   }
-  .home-page_card_details-post_user_use-name {
+  .card__user-name {
     font-size: 12px;
   }
-  .home-page_card_post {
+  .card__post {
     font-size: 14px;
     width: 311px;
   }
-  .home-page_card_post_heading {
+  .card__post-heading {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 280px) {
-  .home-page_card {
+  .card {
     width: 265px;
     padding: 10px;
   }
-  .home-page_card_img {
+  .card__img {
     width: 245px;
     height: 240px;
   }
-  .home-page_card_details-post_profile-photo {
+  .card__profile-photo {
     width: 30px;
     height: 30px;
     margin-top: 28px;
   }
-  .home-page_card_post {
+  .card__post {
     width: 245px;
     font-size: 12px;
   }
-  .home-page_card_post_heading {
+  .card__heading {
     font-size: 16px;
   }
 }/*# sourceMappingURL=home-page.css.map */
